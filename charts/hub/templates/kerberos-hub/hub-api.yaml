@@ -373,3 +373,6 @@ spec:
               value: "{{ .Values.kerberosvault.sprite.width }}"
             - name: VAULT_SPRITE_HEIGHT
               value: "{{ .Values.kerberosvault.sprite.height }}"
+            {{- if .Values.kerberoshub.extraEnv }}
+            {{- toYaml .Values.kerberoshub.extraEnv | nindent 12 }}
+            {{- end }}

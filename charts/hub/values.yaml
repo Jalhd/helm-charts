@@ -183,6 +183,12 @@ kerberoshub:
     fallbackLanguage: "english"
     # Legacy (reseller) it is possible to link to AWS S3 and IAM (however Kerberos Vault is now the recommended option).
     # This is primarily used for creation of subscriptions, and not needed if you are using mainly Kerberos Vault.
+
+    # Extra environment variables like proxy to set for kerberos-hub pods
+#    extraEnv:
+#      - name: HTTP_PROXY
+#        value: "custom_value"
+
     aws:
       region: "xxx"
       bucket: "xxx"

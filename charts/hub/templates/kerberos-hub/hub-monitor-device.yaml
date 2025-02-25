@@ -85,4 +85,6 @@ spec:
               value: "{{ .Values.email.mailgun.domain }}"
             - name: MAILGUN_API_KEY
               value: "{{ .Values.email.mailgun.apikey }}"
-
+        {{- if .Values.kerberoshub.extraEnv }}
+        {{- toYaml .Values.kerberoshub.extraEnv | nindent 8 }}
+        {{- end }}
